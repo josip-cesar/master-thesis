@@ -1,0 +1,5 @@
+FROM mysql:8.0.12
+ENV MYSQL_ROOT_PASSWORD root
+ENV MYSQL_DATABASE orderServiceDB
+ENV MYSQL_USER orderService
+ENV MYSQL_PASSWORD orderService
