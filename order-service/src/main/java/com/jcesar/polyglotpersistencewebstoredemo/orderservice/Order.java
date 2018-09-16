@@ -114,7 +114,11 @@ public class Order {
 	}
 
 
-
-
+	@Override
+	public String toString() {
+		return "Order [id=" + id + ", customerId=" + customerId + ", createdOn=" + createdOn + ", totalPrice="
+				+ totalPrice + ", orderItems=" + orderItems + ", paymentDetails=" + paymentDetails
+				+ ", shippingDetails=" + shippingDetails + "]";
+	}
 
 }

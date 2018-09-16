@@ -24,6 +24,10 @@ public class OrderController {
 		order.getPaymentDetails().setOrder(order);
 		order.getShippingDetails().setOrder(order);
 		order.getOrderItems().forEach(item -> {item.setOrder(order);});
+		
+		System.out.println("New order: ");
+//		System.out.println(order.toString());
+		
 		orderRepository.save(order);
 	}
 	

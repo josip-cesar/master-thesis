@@ -8,6 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class OrderItem {
 
@@ -18,6 +20,7 @@ public class OrderItem {
 	Double price;
 	Integer quantity;
 	
+	@JsonIgnore
 	@ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id", nullable = false)
     private Order order;
@@ -90,7 +93,11 @@ public class OrderItem {
 
 
 
-
+	@Override
+	public String toString() {
+		return "OrderItem [id=" + id + ", productCatalogItemId=" + productCatalogItemId + ", price=" + price
+				+ ", quantity=" + quantity + ", order=" + order + "]";
+	}
 	
 	
 }

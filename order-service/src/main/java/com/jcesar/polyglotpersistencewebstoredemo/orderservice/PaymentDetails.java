@@ -7,6 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class PaymentDetails {
 	
@@ -18,6 +20,7 @@ public class PaymentDetails {
 	private String expDate;
 	private String cvv;
 
+	@JsonIgnore
 	@OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id")
 	private Order order;
@@ -72,6 +75,12 @@ public class PaymentDetails {
 
 	public void setOrder(Order order) {
 		this.order = order;
+	}
+
+	@Override
+	public String toString() {
+		return "PaymentDetails [id=" + id + ", cardHolder=" + cardHolder + ", cardNumber=" + cardNumber + ", expDate="
+				+ expDate + ", cvv=" + cvv + ", order=" + order + "]";
 	}
 
 }

@@ -7,18 +7,21 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class ShippingDetails {
 	
 	@Id
 	@GeneratedValue
 	private Integer id;
-	private String adress;
+	private String address;
 	private String city;
 	private String state;
 	private String zip;
 	private String country;
 	
+	@JsonIgnore
 	@OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id")
 	private Order order;
@@ -39,13 +42,13 @@ public class ShippingDetails {
 	}
 
 
-	public String getAdress() {
-		return adress;
+	public String getAddress() {
+		return address;
 	}
 
 
-	public void setAdress(String adress) {
-		this.adress = adress;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 
@@ -96,6 +99,13 @@ public class ShippingDetails {
 
 	public void setOrder(Order order) {
 		this.order = order;
+	}
+
+
+	@Override
+	public String toString() {
+		return "ShippingDetails [id=" + id + ", adress=" + address + ", city=" + city + ", state=" + state + ", zip="
+				+ zip + ", country=" + country + ", order=" + order + "]";
 	}
 
 
