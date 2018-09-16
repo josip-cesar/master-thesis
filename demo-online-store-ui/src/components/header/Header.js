@@ -49,7 +49,7 @@ function Header(props) {
             </IconButton>
           
           <Typography variant="title" color="inherit" className={classes.grow}>
-              Demo Online Store (Josip Cesar, FOI, diplomski rad - 2018.)
+              Aplikacije temeljene na NoSQL i relacijskim bazama podataka (Josip Cesar, FOI, diplomski rad - 2018.)
           </Typography>
 
 

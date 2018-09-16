@@ -61,7 +61,7 @@ function createOrderItemList (cart, cartedProducts) {
   for (var i = 0; i < length; i++) {
     const price = getProductForCartItem(cartedProducts, cart[i].productId).price;
      var o = {
-        productId: cart[i].productId,
+        productCatalogItemId: cart[i].productId,
         quantity: cart[i].quantity,
         price: price
       }
@@ -158,7 +158,7 @@ class Checkout extends React.Component {
       const totalPrice = calculateTotalPrice(this.props.cart, this.props.cartedProducts);
       const orderItemList = createOrderItemList(this.props.cart, this.props.cartedProducts);
       const order = {
-        userId: this.props.loggedUser.id,
+        customerId: this.props.loggedUser.id,
         totalPrice: totalPrice,
         shippingDetails: shippingDetails,
         paymentDetails: paymentDetails,
