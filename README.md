@@ -7,3 +7,5 @@ Josip Cesar's master thesis sample app
 * **_Node package manager (npm)_** - npm can be istalled by installing Node.js from, https://nodejs.org/en/download/
 * **_Spring Tool Suite_** - get Spring Tool Suite from, https://spring.io/tools/sts
 
+## Startup instructions 
+//TODO
