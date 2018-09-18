@@ -23,7 +23,7 @@ docker-compose up -d
 This will start one MongoDB and two MySQL docker containers which are needed to run web-app services.
 
 ### 3. Build and run web-app services
-Individual web services are located in **implementation/web-app** folder. The fastest way to start them is by using Spring Tool Suite. All you have to do is to open each individual project located in implementation/web-app folder inside of Spring Tool Suite and run them as standard Java program.
+Individual web services are located in **implementation/web-app** folder. The fastest way to build and start them is by using Spring Tool Suite. All you have to do is to open each individual project located in implementation/web-app folder inside of Spring Tool Suite and run them as standard Java program.
 
 Once this is done **_user-service_** should be available at `http://localhost:8181`. Similarly, **_product-service_** should be available at the port `8282`, **_shopping-cart-service_** at the port `8383`, and **_order-service_** at the port `8484`.
 
