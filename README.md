@@ -9,7 +9,7 @@ Josip Cesar's master thesis sample app
 
 ## Startup instructions 
 ### 1. Download or Clone Repository
-Download or clone this repository to any folder on your machine. You can clone this repository by executing following instruction,
+Download or clone this repository to any folder on your machine. You can clone this repository by executing following instruction:
 ```
 git clone https://github.com/josip-cesar/master-thesis.git
 ```
