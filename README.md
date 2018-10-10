@@ -33,4 +33,4 @@ Frontend application is located in **implementation/demo-online-store-ui** folde
 npm install
 npm start
 ```
-Once above instructions successfully executed, you can view frontend applikacion by browsing this URL, http://localhost:3000.
+Once above instructions are successfully executed, you can view frontend applikacion by browsing this URL, http://localhost:3000.
